@@ -50,7 +50,7 @@
 	}
 # 注意！
 withDefaultSchema()：这个方法会自动执行spring-web-security中的一个users.dll文件，为数据库中创建两张表，users与authixxx，但是，打开这个文件你会发现建表语句有问题，create table users(varchar_ignorecase(50))，我用的是mysql数据库，根本没有varchar_ignorecase这个数据类型，修改为varchar(50)即可。
-***
+
 .withUser("user").password("password").roles("USER")：这个方法会向数据库中添加一个账号为user,密码为password，权限为ROLE_USER的用户。
-***
+
 我们再次在浏览器中验证就会发现，必须是数据库中没有停用的，并且在权限表中有权限的用户才可以登陆。
