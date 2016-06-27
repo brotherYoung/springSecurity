@@ -9,5 +9,5 @@
 					.withUser("user").password("password").roles("USER");
 		}
 	}
-	第一个springSecurity的程序就搞定了
+	除了/login以外，任何url都必须登陆才可以访问，登陆账号为user，密码为password。
 	
