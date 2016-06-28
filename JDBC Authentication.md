@@ -87,9 +87,7 @@
 		}
 	}
 # 注意！
-withDefaultSchema()：这个方法会自动执行spring-security-core这个jar包中org/springframework/security/core/userdetails/jdbc/users.ddl文件，为数据库中创建两张表，（下面这个ddl文件内容是我已经修改好的）	
-但是，打开这个文件你会发现建表语句有问题，create table
-users(username *varchar_ignorecase(50)*)，我用的是mysql数据库，根本没有varchar_ignorecase这个数据类型，修改为varchar(50)即可。
+withDefaultSchema()：这个方法会自动执行spring-security-core这个jar包中org/springframework/security/core/userdetails/jdbc/users.ddl文件，为数据库中创建两张表，但是，打开这个文件你会发现建表语句有问题，create table users(username **varchar_ignorecase(50)**)，我用的是mysql数据库，根本没有varchar_ignorecase这个数据类型，修改为varchar(50)即可，下面为修改后的建表语句。
 
 	create table users(username varchar(50) not null primary key,password varchar(500) not null,enabled boolean not null);
 	create table authorities (username varchar(50) not null,authority varchar(50) not null,constraint fk_authorities_users foreign key(username) references users(username));
