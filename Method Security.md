@@ -35,7 +35,6 @@
 
     @Controller
     public class UserController {
-    	
     	@RequestMapping("/index.do")
     	@Secured("ROLE_ADMIN")
     	public ModelAndView index() {
@@ -44,3 +43,6 @@
     		return modelAndView;
     	}
     }
+当我们开启了security的方法注解后，就可以为某个具体方法授权了，在这里为了简便，直接在controller上授权，允许拥有ADMIN权限的用户
+访问index()方法。**必须强调：我在使用Method Security的时候犯了一个错误，因为英文文档上没写清楚@EnableGlobalMethodSecurity(securedEnabled = true)具体注解在哪里，于是我将此注解写在了controller上，想着这里需要使用@secured，结果出错了！最后也是查了几天资料才发现需要
+将此注解写在带有注解@Configuration的security配置类上，从名字也可以看出来嘛，EnableGlobalMethodSecurity,global全局的配置,何必写在某个方法上呢！**
