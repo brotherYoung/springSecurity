@@ -4,7 +4,6 @@
 # security的配置类，将认证改为jdbc认证。
 	@Configuration
 	@EnableWebSecurity
-	@EnableGlobalMethodSecurity(securedEnabled = true)
 	public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		@Autowired
