@@ -90,8 +90,8 @@
 	        </param-value>
 	    </context-param>
 	    <context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>com.*</param-value>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>com.*</param-value>
 	    </context-param>
 		
 		<!-- web项目中的bean依赖spring注入 -->
