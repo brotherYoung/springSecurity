@@ -136,7 +136,7 @@
 	    </servlet-mapping>
 	</web-app>
 
-实现零配置的关键就在于contextClass,指定了一个类AnnotationConfigWebApplicationContext,从名字就可以看出来，利用注解的方式去配置web应用的上下文。不使用这个类的话，contextLocation就只能指向具体的xml配置文件，而现在我们可以在contextLocation中指向包了，让spring在类中去扫描Bean。
+实现零配置的关键就在于contextClass,指定了一个类AnnotationConfigWebApplicationContext,从名字就可以看出来，利用注解的方式去配置web应用的上下文。不使用这个类的话，contextConfigLocation就只能指向具体的xml配置文件，而现在我们可以在contextConfigLocation中指向包了，让spring在类中去扫描Bean。
 
 零配置：
 
