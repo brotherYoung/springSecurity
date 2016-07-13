@@ -20,8 +20,6 @@
 		}
 	}
 
-@Configuration: 告诉spring这是一个bean。
-
 @EnableWebSecurity：告诉spring这就是一个springSecurity的配置。
 
 configre(HttpSecurity http)：这个方法过滤http请求，控制访问权限，这里需要注意下，`/**`表示可以跨文件夹，`/*`表示只能是这个文件夹下的子文件夹。在这个方法中我们可以指定自己的loginPage,设置logout。
