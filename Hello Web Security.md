@@ -21,7 +21,7 @@
 		}
 	}
 
-@Configuration：告诉spring这个类需要其管理。
+@Configuration：此类依赖spring管理。
 
 @EnableWebSecurity：告诉spring这就是一个springSecurity的配置。
 
