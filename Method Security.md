@@ -1,6 +1,7 @@
 # security方法级别的保护
 实际开发中，我们不仅可以使用security来限制用户对视图（页面）的访问，还能用在某个方法上进行访问控制，这个方法一般是service层的方法。
 
+    @Configuration
     @EnableWebSecurity
     @EnableGlobalMethodSecurity(securedEnabled = true)
     public class SecurityConfig extends WebSecurityConfigurerAdapter {
