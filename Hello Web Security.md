@@ -1,4 +1,3 @@
-	@Configuration
 	@EnableWebSecurity
 	public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		@Autowired
@@ -21,7 +20,6 @@
 		}
 	}
 
-@Configuration：此类依赖spring管理。
 
 @EnableWebSecurity：告诉spring这就是一个springSecurity的配置。
 
