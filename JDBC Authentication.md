@@ -2,7 +2,6 @@
 实际开发中，用户数据都在数据库中，我们需要连接数据库进行动态认证。
 
 # security的配置类，将认证改为jdbc认证。
-	@Configuration
 	@EnableWebSecurity
 	public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
